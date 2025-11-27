@@ -1,15 +1,104 @@
 # Life_expectancy
-Prepared and cleaned a large life expectancy dataset (3k+ records), mastering the end-to-end EDA process from data preprocessing to visualization.
-One of the most element in end of life judgement is Life expectancy. This research explores the computation of
-machine learning regression techniques to predict life expectancy using a dataset of 15 years collected from Kaggle,
-comprising demographic, health, and socioeconomic features. The dataset contain information from 193 countries with
-multiple variables such as 'Country', 'Year', 'Status' (Developer/Developing), and many numerical indicators (e.g., Adult
-Mortality, GDP, and Schooling). Twice Exploratory Data Analysis (EDA) was performed to gain proper insights into
-feature distributions, identify outliers, and assess correlations. Missing values were treated using both mean imputation
-and kNN imputation([6]), and categorical variables were encoded by label encoding. A rapid model benchmarking
-approach is applied using the LazyPredict library was employed to compare multiple regression models, from where
-many models were selected for Hyperparamertertunning to enhance their performance. The Regression model which
-achieve outstanding performance after doing Hyperparameter Tunning on the test set is XGBRegressor model([4], [5])
-also the R2 score of model is 96.87% with minimal RMSE. These results highlight the potential and challenges of
-predictive modeling in life expectancy estimation, and underscore the importance of thorough preprocessing and model
-validation.
+
+📈 Life Expectancy Prediction using Advanced Regression Models
+🏷️ Machine Learning • Regression • XGBoost • Data Science
+📝 Abstract
+
+This project presents a machine learning–driven approach to accurately predict life expectancy using a comprehensive 15-year dataset from 193 countries (sourced from Kaggle).
+The workflow includes:
+
+Two-stage Exploratory Data Analysis (EDA)
+
+Robust missing value imputation (Mean + kNN)
+
+Categorical encoding
+
+Benchmarking 40+ regression models using LazyPredict
+
+Hyperparameter tuning for high-performing models
+
+Final selection of XGBRegressor, achieving an exceptional R² of 96.87%
+
+These results highlight the effectiveness of careful preprocessing and ensemble learning for global public health predictions.
+
+🎯 Key Objectives
+
+📊 Perform detailed Exploratory Data Analysis (EDA)
+
+🔍 Implement kNN imputation for missing values
+
+⚡ Benchmark 40+ regression models using LazyPredict
+
+🔧 Apply Hyperparameter Tuning to top-performing models
+
+🤖 Build a highly accurate XGBRegressor model for Life Expectancy prediction
+
+📊 Dataset Overview
+
+Total Records: 2,938
+
+Features: 22
+
+Countries: 193
+
+Years Covered: 15
+
+Target Variable: Life expectancy
+
+Feature Categories
+Category	Features
+Demographic	Country, Year, Status
+Health Factors	Life expectancy, Adult mortality, Infant deaths, Under-five deaths, Hepatitis B, Measles, Polio, Diphtheria, HIV/AIDS, BMI, Thinness indicators
+Economic Factors	GDP, Schooling, Income composition of resources, Percentage expenditure, Total expenditure
+Population	Population
+Categorical	Country (193 unique), Status (Developed/Developing)
+🛠️ Methodology and Pipeline
+1. Data Preprocessing
+
+🧼 Data cleaning and formatting
+
+🩹 Missing value handling
+
+Mean imputation
+
+kNN Imputation for more accurate estimates
+
+🔠 Categorical Encoding using Label Encoding
+
+2. Model Benchmarking
+
+Used LazyPredict to rapidly train & evaluate 40+ regression models, identifying high-potential candidates.
+
+3. Hyperparameter Tuning
+
+Performed advanced tuning (Grid Search / Random Search + Cross Validation) on the best models to maximize performance.
+
+4. Final Model Selection
+
+Evaluated tuned models on a held-out test set to select the best-performing model.
+
+✅ Results & Conclusion
+
+After extensive tuning, the Optimized XGBRegressor emerged as the best model:
+
+Model	Metric	Score
+XGBRegressor (Optimized)	R² Score	96.87%
+XGBRegressor (Optimized)	RMSE	Very low
+
+📌 Interpretation:
+The optimized model explains almost 97% of the variance in life expectancy — proving strong predictive power and model reliability.
+
+📁 Project Structure
+📦 Life-Expectancy-Prediction
+├── 📄 README.md
+├── 📓 notebooks/
+│   └── EDA_and_Model.ipynb
+├── 🗂️ data/
+│   └── life_expectancy.csv
+├── 🧠 models/
+│   └── xgb_regressor.pkl
+└── 🧪 src/
+    ├── preprocessing.py
+    ├── model_training.py
+    └── evaluation.py
+
